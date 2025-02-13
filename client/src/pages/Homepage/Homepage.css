@@ -45,3 +45,7 @@ li {
 .title-anime {
   font-size: 2rem;
 }
+.anime-container a {
+  text-decoration: none;
+  color: inherit;
+}

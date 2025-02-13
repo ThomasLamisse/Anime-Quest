@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./AnimePage.css";
+import { Link } from "react-router-dom";
 
 interface Item {
   id: number;
@@ -33,9 +34,11 @@ function AnimePage() {
               <img src={`/Homepage/${item.image}`} alt="" />
             </div>
             <section className="description">
-              <h1 className="title-anime">
-                {item.title} ({item.release_year}), {item.rating}
-              </h1>
+              <Link to={`/informations/${item.id}`}>
+                <h1 className="title-anime">
+                  {item.title} ({item.release_year}), {item.rating}
+                </h1>
+              </Link>
               <div className="type">{item.type}</div>
               <p className="author-anime">{item.author}</p>
               <p className="synopsis-anime">{item.synopsis}</p>
@@ -46,5 +49,4 @@ function AnimePage() {
     </>
   );
 }
-
 export default AnimePage;

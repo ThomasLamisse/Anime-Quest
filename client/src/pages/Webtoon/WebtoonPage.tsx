@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./WebtoonPage.css";
+import { Link } from "react-router-dom";
 
 interface Item {
   id: number;
@@ -19,7 +20,7 @@ function WebtoonPage() {
     fetch(`${import.meta.env.VITE_API_URL}/api/item`)
       .then((response) => response.json())
       .then((data: Item[]) => {
-        setWebtoons(data.filter((item) => item.type === "Webtoon")); // Filtre les webtoons
+        setWebtoons(data.filter((item) => item.type === "Webtoon"));
       });
   }, []);
 
@@ -33,9 +34,11 @@ function WebtoonPage() {
               <img src={`/Homepage/${item.image}`} alt="" />
             </div>
             <section className="description">
-              <h1 className="title-webtoon">
-                {item.title} ({item.release_year}), {item.rating}
-              </h1>
+              <Link to={`/informations/${item.id}`}>
+                <h1 className="title-anime">
+                  {item.title} ({item.release_year}), {item.rating}
+                </h1>
+              </Link>
               <div className="type">{item.type}</div>
               <p className="author-webtoon">{item.author}</p>
               <p className="synopsis-webtoon">{item.synopsis}</p>

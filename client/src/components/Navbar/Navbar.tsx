@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <>
       <section className="section-navbar">
-        <img className="logo" src="./Navbar/logo.png" alt="logo" />
+        <img className="logo" src="/Navbar/logo.png" alt="logo" />
 
         <Link to="/" className="homepage-navbar">
           Accueil

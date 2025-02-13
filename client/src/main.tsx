@@ -8,6 +8,7 @@ import App from "./App";
 import AnimePage from "./pages/Anime/AnimePage";
 import Homepage from "./pages/Homepage/Homepage";
 import WebtoonPage from "./pages/Webtoon/WebtoonPage";
+import Informations from "./pages/Informations/Informations";
 
 // Création du router avec les routes
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/webtoon",
         element: <WebtoonPage />,
+      },
+      {
+        path: "/informations/:id",
+        element: <Informations />,
       },
     ],
   },

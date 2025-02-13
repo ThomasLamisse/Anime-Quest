@@ -50,3 +50,7 @@ li {
 .title-webtoon {
   font-size: 2rem;
 }
+.webtoon-container a {
+  text-decoration: none;
+  color: inherit;
+}
