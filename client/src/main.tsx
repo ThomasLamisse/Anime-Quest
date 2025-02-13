@@ -7,8 +7,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import AnimePage from "./pages/Anime/AnimePage";
 import Homepage from "./pages/Homepage/Homepage";
-import WebtoonPage from "./pages/Webtoon/WebtoonPage";
 import Informations from "./pages/Informations/Informations";
+import WebtoonPage from "./pages/Webtoon/WebtoonPage";
 
 // Création du router avec les routes
 const router = createBrowserRouter([
