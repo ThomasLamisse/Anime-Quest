@@ -7,12 +7,12 @@ const router = express.Router();
 /* ************************************************************************* */
 
 // Define item-related routes
-import itemActions from "./modules/item/itemActions";
 
-router.get("/api/items", itemActions.browse);
-router.get("/api/items/:id", itemActions.read);
-router.post("/api/items", itemActions.add);
+import HomepageAction from "./modules/item/Homepage/HomepageAction";
 
+router.get("/api/item", HomepageAction.browse);
+
+router.get("/api/item/:id", HomepageAction.read);
 /* ************************************************************************* */
 
 export default router;

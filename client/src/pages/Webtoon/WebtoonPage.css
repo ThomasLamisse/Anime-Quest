@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Irish+Grover&family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap");
+.img-homepage {
+  border-radius: 20px;
+  width: 45%;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin: 3%;
+}
+
+.title-homepage {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  flex-direction: column;
+  list-style: none;
+}
+li {
+  margin: 3%;
+}
+.all-webtoon-container {
+  margin-top: -5%;
+}
+.webtoon-container {
+  display: flex;
+  margin-left: 20%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.title-list-webtoon {
+  display: flex;
+  justify-content: center;
+  margin-top: 6%;
+  margin-bottom: 15%;
+}
+.description {
+  margin-left: 3%;
+}
+
+.author-webtoon {
+  font-size: 1.3rem;
+}
+.synopsis-webtoon {
+  margin-top: 2%;
+  width: 75%;
+  font-family: "Playfair Display", sans-serif;
+}
+.title-webtoon {
+  font-size: 2rem;
+}

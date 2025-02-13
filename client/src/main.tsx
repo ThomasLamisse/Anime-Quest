@@ -1,40 +1,43 @@
-// Import necessary modules from React and React Router
+// main.tsx
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-/* ************************************************************************* */
-
-// Import the main app component
+// Import des composants
 import App from "./App";
+import AnimePage from "./pages/Anime/AnimePage";
+import Homepage from "./pages/Homepage/Homepage";
+import WebtoonPage from "./pages/Webtoon/WebtoonPage";
 
-// Import additional components for new routes
-// Try creating these components in the "pages" folder
-
-// import About from "./pages/About";
-// import Contact from "./pages/Contact";
-
-/* ************************************************************************* */
-
-// Create router configuration with routes
-// You can add more routes as you build out your app!
+// Création du router avec les routes
 const router = createBrowserRouter([
   {
-    path: "/", // The root path
-    element: <App />, // Renders the App component for the home page
+    path: "/",
+    element: <App />, // App englobe la Navbar et les pages enfants
+    children: [
+      {
+        path: "/",
+        element: <Homepage />,
+      },
+      {
+        path: "/anime",
+        element: <AnimePage />,
+      },
+      {
+        path: "/webtoon",
+        element: <WebtoonPage />,
+      },
+    ],
   },
-  // Try adding a new route! For example, "/about" with an About component
 ]);
 
-/* ************************************************************************* */
-
-// Find the root element in the HTML document
+// Trouver l'élément root dans le HTML
 const rootElement = document.getElementById("root");
 if (rootElement == null) {
   throw new Error(`Your HTML Document should contain a <div id="root"></div>`);
 }
 
-// Render the app inside the root element
+// Rendre l'application avec le router
 createRoot(rootElement).render(
   <StrictMode>
     <RouterProvider router={router} />
