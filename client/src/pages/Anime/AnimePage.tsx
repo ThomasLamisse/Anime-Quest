@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./AnimePage.css";
 
 interface Item {
   id: number;
