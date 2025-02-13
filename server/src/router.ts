@@ -8,8 +8,8 @@ const router = express.Router();
 
 // Define item-related routes
 
-import HomepageAction from "./modules/item/Homepage/HomepageAction";
 import InformationsAction from "./modules/Informations/InformationsAction";
+import HomepageAction from "./modules/item/Homepage/HomepageAction";
 
 router.get("/api/item", HomepageAction.browse);
 
